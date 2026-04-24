@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    padding: 0 75px;
+}
+header{
+    background-color: white;
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+body{
+    background-color: #4CAF50;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.texto-logo{
+    font-size: 20px;
+}
+main{
+    background-color: white;
+    margin: 30px 50px;
+}
+.oqe{
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.oqe-texto{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.oqe-img{
+    width: 50%;
+    height: 50%;
+}
+.tlix{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 41px;
+}
+.tlix-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 207px;
+}
+.tlix-btn-esq, .tlix-btn-drt{
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+}
+.tlix-btn-hoover{
+    background-color: #A5D6A7;
+    padding: 10px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.tlix-btn-hoover:hover{
+    background-color: #4CAF50;
+}
