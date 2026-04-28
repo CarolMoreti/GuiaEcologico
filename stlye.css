@@ -1,81 +1,394 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+/* RESET BÁSICO */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
-.container{
-    padding: 0 75px;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2F5233; /* FUNDO VERDE */
 }
-header{
-    background-color: white;
-    width: 100%;
-    height: 54px;
+
+/* MAIN como "caixa branca central" */
+main.container {
+    background-color: #E8E2D0; /* ou branco se preferir */
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* HEADER também dentro da área branca */
+header.container {
+    background-color: #E8E2D0;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* CONTAINER PADRÃO */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* ================= HEADER ================= */
+header {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
 }
-body{
-    background-color: #4CAF50;
-}
-.logo{
+
+.logo {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
     gap: 10px;
 }
 
-.texto-logo{
+.logo img {
+    width: 50px;
+}
+
+.texto-logo {
     font-size: 20px;
+    font-weight: bold;
+    color: #2F5233;
 }
-main{
-    background-color: white;
-    margin: 30px 50px;
+
+/* ================= IMAGEM PRINCIPAL ================= */
+.imagem {
+    margin-top: 20px;
 }
-.oqe{
+
+.img-main {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* ================= SEÇÃO O QUE É ================= */
+.oqe {
     display: flex;
-    flex-direction: row;
-    gap: 52px;
+    gap: 30px;
+    margin-top: 40px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
 }
-.oqe-texto{
-    border: 1px solid black;
-    border-radius: 5px;
-}
-.oqe-img{
+.oqe-texto, .oqe-img {
     width: 50%;
-    height: 50%;
 }
-.tlix{
+.oqe-texto .container{
+    padding: 0;
+}
+.oqe-texto {
+
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+.oqe-texto h1 {
+    color: #2F5233;
+    margin-bottom: 10px;
+}
+
+.oqe-texto h3 {
+    color: #2E86AB;
+    margin-bottom: 10px;
+}
+
+.oqe-texto p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.oqe-img {
+    width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+/* TEXTO */
+.oqe-texto h1 {
+    color: #2F5233;
+    margin-bottom: 10px;
+}
+
+.oqe-texto h3 {
+    color: #2E86AB;
+    margin-bottom: 10px;
+}
+
+.oqe-texto p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* IMAGEM MAIOR E IGUAL */
+.oqe-img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* ================= TIPOS DE LIXO ================= */
+.tlix {
+    margin-top: 50px;
+}
+
+.tlix-texto h1 {
+    text-align: center;
+    color: #2F5233;
+    margin-bottom: 30px;
+}
+
+/* BOTÕES */
+.tlix-btn {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* COLUNAS */
+.tlix-btn-esq,
+.tlix-btn-drt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* BOTÕES PADRÃO (MESMO TAMANHO) */
+.tlix-btn-hoover {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 41px;
+    width: 300px; /* força tamanho igual */
+    height: 70px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    color: #2E86AB;
+    text-align: center;
 }
-.tlix-btn{
-    display: flex;
-    flex-direction: row;
-    gap: 207px;
+
+.tlix-btn-hoover:hover {
+    transform: translateY(-5px);
+    background-color: #2F5233;
+    color: white;
 }
-.tlix-btn-esq, .tlix-btn-drt{
-    display: flex;
-    flex-direction: column;
-    gap: 41px;
+h1{
+    color: #2F5233;
 }
-.tlix-btn-hoover{
-    background-color: #A5D6A7;
-    padding: 10px;
-    width: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+/* SEÇÃO COLETA */
+.coleta {
+    padding: 40px 5%;
+    font-family: Arial, sans-serif;
 }
-.tlix-btn-hoover:hover{
-    background-color: #4CAF50;
+
+/* TÍTULO */
+.coleta h1 {
+    text-align: center;
+    color: #2F5233;
+    margin-bottom: 30px;
+}
+
+/* GRID FIXO 2 COLUNAS */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colunas fixas */
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* TEXTO */
+.card h3 {
+    color: #2E86AB;
+    margin-bottom: 8px;
+}
+
+.card p {
+    margin: 4px 0;
+    color: #333;
+}
+
+/* MAPA */
+.map {
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #2F5233;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e3a25;
+}
+/* FUNDO ESCURO */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* CAIXA */
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 25px;
+    width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: aparecer 0.3s ease;
+}
+
+/* ANIMAÇÃO */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BOTÃO FECHAR */
+.fechar {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+/* ================= FOOTER ================= */
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background-color: #2F5233;
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer strong {
+    color: #E8E2D0;
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+    }
+
+    /* IMAGEM PRINCIPAL */
+    .img-main {
+        height: auto;
+    }
+
+    /* ================= O QUE É ================= */
+    .oqe {
+        flex-direction: column;
+    }
+
+    .oqe-texto,
+    .oqe-img {
+        width: 100%;
+    }
+
+    .oqe-img {
+        margin-top: 15px;
+    }
+
+    /* ================= TIPOS ================= */
+    .tlix-btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .tlix-btn-esq,
+    .tlix-btn-drt {
+        width: 100%;
+        align-items: center;
+    }
+
+    .tlix-btn-hoover {
+        width: 90%;
+    }
+
+    /* ================= COLETA ================= */
+    .grid {
+        grid-template-columns: 1fr; /* vira 1 coluna */
+    }
+
+    /* ================= MODAL ================= */
+    .modal-content {
+        width: 90%;
+        margin: 30% auto;
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+        font-size: 13px;
+        padding: 15px;
+    }
 }

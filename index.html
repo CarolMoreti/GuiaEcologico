@@ -15,15 +15,18 @@
     </header>
     <main class="container">
         <section class="imagem container">
-
+            <img src="assests/img/main.png" alt="" class="img-main">
         </section>
         <section class="container oqe">
             <div class="oqe-texto container">
                 <h1>O que é Lixo Eletrônico?</h1>
                 <h3>Porque Reciclar?</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati iusto sed molestias possimus aperiam facilis excepturi debitis suscipit alias voluptates! Maiores eveniet in eligendi tenetur natus quaerat ducimus quae deserunt!</p>
+                <p>Segundo a Green Eletron (2020), o lixo eletrônico é também conhecido como e-lixo ou resíduos de equipamento eletrônico (REEE), eles estão se referindo aos produtos eletrônicos quebrados, danificados ou sem utilidade por algum motivo, além de pilhas descarregadas que precisam ser descartados. E devem ser descartados da forma correta, pois podem ser reciclados.
+ Normalmente, os componentes dos aparelhos são feitos de plástico, vidro, metais, entre outros. Quando ocorre o processo de reciclagem, os resíduos eletrônicos são desmontados e as partes transformadas em matéria-prima para a indústria.
+Vale ressaltar que o desmonte dos aparelhos deve ser feita com segurança, por profissionais qualificados, jamais feitos em casa.
+</p>
             </div>
-            <img src="/assests/img/img.jpg" alt="" class="oqe-img">
+            <img src="/assests/img/img.png" alt="" class="oqe-img">
         </section>
         <section class="container tlix">
             <div class="tlix-texto">
@@ -31,17 +34,189 @@
             </div>
             <div class="tlix-btn container">
                 <div class="tlix-btn-esq">
-                    <div class="tlix-btn-hoover">EQUIPAMENTOS DE INFORMÁTICA</div>
-                    <div class="tlix-btn-hoover">DISPOSITIVOS MÓVEIS</div>
-                    <div class="tlix-btn-hoover">ELETRODOMÉSTICOS</div>
+                    <div class="tlix-btn-hoover" onclick="abrirModal('info')">EQUIPAMENTOS DE INFORMÁTICA</div>
+                    <div class="tlix-btn-hoover" onclick="abrirModal('moveis')">DISPOSITIVOS MÓVEIS</div>
+                    <div class="tlix-btn-hoover" onclick="abrirModal('eletro')">ELETRODOMÉSTICOS</div>
                 </div>
                 <div class="tlix-btn-drt">
-                    <div class="tlix-btn-hoover">ACESSÓRIOS</div>
-                    <div class="tlix-btn-hoover">PILHAS E BATERIAS</div>
-                    <div class="tlix-btn-hoover">LÂMPADAS</div>
+                    <div class="tlix-btn-hoover" onclick="abrirModal('acessorios')">ACESSÓRIOS</div>
+                    <div class="tlix-btn-hoover" onclick="abrirModal('pilhas')">PILHAS E BATERIAS</div>
+                    <div class="tlix-btn-hoover" onclick="abrirModal('lampadas')">LÂMPADAS</div>
                 </div>
             </div>
         </section>
+        <section class="coleta">
+    <h1>🌱 Pontos de Coleta em Sorocaba</h1>
+
+    <div class="grid">
+
+        <!-- METARRECICLAGEM -->
+        <div class="card">
+            <h3>Metarreciclagem</h3>
+            <p>Av. Armando Sales de Oliveira, 762 – Trujillo</p>
+            <p>🕒 8h às 16h</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=Av.+Armando+Sales+de+Oliveira,+762+Sorocaba&output=embed"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Av.+Armando+Sales+de+Oliveira,+762+Sorocaba" target="_blank" class="btn">Ver rota</a>
+        </div>
+
+        <!-- SEMA -->
+        <div class="card">
+            <h3>SEMA</h3>
+            <p>Rua Santa Maria, 197 – Vila Hortência</p>
+            <p>🕒 8h às 17h</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=Rua+Santa+Maria,+197+Sorocaba&output=embed"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Santa+Maria,+197+Sorocaba" target="_blank" class="btn">Ver rota</a>
+        </div>
+
+        <!-- ECOPONTOS -->
+        <div class="card">
+            <h3>Ecopontos</h3>
+            <p>Vila Helena, Cajuru, Júlio de Mesquita Filho, Vila Isabel</p>
+            <p>✔️ Diversos resíduos</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=ecopontos+Sorocaba&output=embed"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=ecopontos+Sorocaba" target="_blank" class="btn">Ver locais</a>
+        </div>
+
+        <!-- GREEN ELETRON -->
+        <div class="card">
+            <h3>Green Eletron</h3>
+            <p>Carrefour, Casas Bahia, Coop</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=Green+Eletron+Sorocaba&output=embed"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Green+Eletron+Sorocaba" target="_blank" class="btn">Ver locais</a>
+        </div>
+
+        <!-- COOPERESO -->
+        <div class="card">
+            <h3>COOPERESO</h3>
+            <p>Rua Ourinhos, 241 – Jardim Leocádia</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=Rua+Ourinhos,+241+Sorocaba&output=embed"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Ourinhos,+241+Sorocaba" target="_blank" class="btn">Ver rota</a>
+        </div>
+
+        <!-- RECICLA SOROCABA -->
+        <div class="card">
+            <h3>Recicla Sorocaba</h3>
+            <p>Alameda Itaporanga, 374 – Jardim Nova Sorocaba</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=Alameda+Itaporanga,+374+Sorocaba&output=embed"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Alameda+Itaporanga,+374+Sorocaba" target="_blank" class="btn">Ver rota</a>
+        </div>
+
+        <!-- RECYCLE -->
+        <div class="card">
+            <h3>Recycle</h3>
+            <p>R. Dr. Campos Salles, 1090</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=R.+Dr.+Campos+Salles,+1090+Sorocaba&output=embed"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=R.+Dr.+Campos+Salles,+1090+Sorocaba" target="_blank" class="btn">Ver rota</a>
+        </div>
+
+        <!-- CORESO -->
+        <div class="card">
+            <h3>Coreso</h3>
+            <p>R. Encarnação Rando Castellucci, 70 – Jardim Yaya</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=R.+Encarnação+Rando+Castellucci,+70+Sorocaba&output=embed"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=R.+Encarnação+Rando+Castellucci,+70+Sorocaba" target="_blank" class="btn">Ver rota</a>
+        </div>
+
+        <!-- RESOTECH -->
+        <div class="card">
+            <h3>Resotech Ambiental</h3>
+            <p>R. Estanislau Camargo Sampaio, 680</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=R.+Estanislau+Camargo+Sampaio,+680+Sorocaba&output=embed"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=R.+Estanislau+Camargo+Sampaio,+680+Sorocaba" target="_blank" class="btn">Ver rota</a>
+        </div>
+
+        <!-- PRONELK -->
+        <div class="card">
+            <h3>Pronelk Reciclagem</h3>
+            <p>R. Atanázio Soares, 1043 – Jardim São Camilo</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=R.+Atanázio+Soares,+1043+Sorocaba&output=embed"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=R.+Atanázio+Soares,+1043+Sorocaba" target="_blank" class="btn">Ver rota</a>
+        </div>
+
+    </div>
+</section>
+
     </main>
+    <footer class="footer">
+    <p>© 2026 Todos os direitos reservados</p>
+    <p>Feito por <strong>Carolline Moreti</strong></p>
+</footer>
+    <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-texto"></p>
+    </div>
+</div>
 </body>
+<script>
+function abrirModal(tipo) {
+    const titulo = document.getElementById("modal-titulo");
+    const texto = document.getElementById("modal-texto");
+
+    if (tipo === "info") {
+        titulo.innerText = "Equipamentos de Informática";
+        texto.innerText = "Incluem computadores, notebooks, teclados e impressoras. Contêm metais pesados e devem ser descartados corretamente.";
+    }
+
+    if (tipo === "moveis") {
+        titulo.innerText = "Dispositivos Móveis";
+        texto.innerText = "Celulares, tablets e smartphones possuem baterias e componentes tóxicos que exigem descarte adequado.";
+    }
+
+    if (tipo === "eletro") {
+        titulo.innerText = "Eletrodomésticos";
+        texto.innerText = "Geladeiras, micro-ondas e TVs possuem peças recicláveis e substâncias prejudiciais ao meio ambiente.";
+    }
+
+    if (tipo === "acessorios") {
+        titulo.innerText = "Acessórios";
+        texto.innerText = "Cabos, carregadores, fones e periféricos também devem ser reciclados corretamente.";
+    }
+
+    if (tipo === "pilhas") {
+        titulo.innerText = "Pilhas e Baterias";
+        texto.innerText = "Altamente poluentes, podem contaminar solo e água. Nunca descarte no lixo comum.";
+    }
+
+    if (tipo === "lampadas") {
+        titulo.innerText = "Lâmpadas";
+        texto.innerText = "Contêm mercúrio e outros materiais perigosos. Devem ser levadas a pontos de coleta específicos.";
+    }
+
+    document.getElementById("modal").style.display = "block";
+}
+
+function fecharModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+/* FECHAR CLICANDO FORA */
+window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 </html>
